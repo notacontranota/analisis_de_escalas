@@ -1,6 +1,9 @@
 tmp-ly
 analisis_escalas.aux
+analisis_escalas.fdb_latexmk
+analisis_escalas.fls
 analisis_escalas.log
+analisis_escalas.lof
 analisis_escalas.out
 analisis_escalas.synctex.gz
 analisis_escalas.toc
