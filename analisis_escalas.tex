@@ -130,8 +130,26 @@ El presente artículo expone un método de análisis de escalas musicales a part
     Por último, y no por eso menos significativo en el esquema de poder del modo menor, se encuentra, con todas sus ansias de poder, el \grado{4} grado. Esta vez la anatomía interválica de la escala no lo favorece, como sí sucede en el modo mayor, con un semitono que le conceda mayor peso, pero sigue teniendo, al igual que en el modo mayor, toda la ascendencia sobre el \grado{1} grado.
   \section{Intervalos y afinación}\label{sec:intervalos-afinacion}
 
-  Son intervalos muy diferentes los que se usan estando en una afinación concordante con los armónicos de los sonidos como lo es la \emph{entonación justa} de los que se utilizan estando en una afinación como la del \emph{igual temperamento}. El hecho de llamar \emph{tercera mayor} tanto a un intervalo de proporción $5:4$ como a otro surgido de $2^{\frac{4}{12}}$ es muy significativo y sin dudas la raíz de tratar a esos dos intervalos tan diferentes como si fuesen el mismo intervalo.\footnote{Mientras $5:4=1.25$, $2^{\frac{4}{12}}=1.2599210498948732$, lo que, expresado en \emph{cents}, es $386.3137138648348$ para el intervalo $5:4$ y $400.0$ para el intervalo $2^{\frac{4}{12}}$. La tercera mayor igual temperada es casi 14 \emph{cents} más grande que la tercera mayor de la afinación justa.} En un intervalo $5:4$ hay una dependencia del sonido agudo respecto al grave por ser éste representante de la fundamental de aquél, mientras que en un intervalo $2^{\frac{4}{12}}$ los sonidos que lo conforman carecen de la cercanía acústica que haga de uno de ellos un sonido dependiente del otro; son dos sonidos que se relacionan «en igualdad de condiciones», ninguno de ellos es un representante de un armónico del otro. La libertad de movimiento que tiene todo intervalo dentro del \emph{igual temperamento} es total, ya que no hay movimientos melódicos cadenciales y no-cadenciales ---todos pueden ser cadenciales y todos pueden ser no-cadenciales--- sino solamente movimientos melódicos libres, como los que ocurren entre armónicos de una fundamental ausente. En los \emph{temperamentos irregulares} como los barrocos (\textsc{Vallotti}, \textsc{Wercmeister}, etc.) estamos ante un escenario híbrido: en parte algunos intervalos permanecen puros mientras otros, de misma denominación, son acústicamente lejanos. En \textsc{Kirnberger III} ---uno de los más importantes y usados temperamentos del siglo XVIII--- se dan cuatro tipos de terceras mayores, de los cuales tres de ellas son proporciones que devienen en intervalos conformados por notas independientes, quedando únicamente una de las doce terceras mayores posibles como proporción $5:4$: la tercera mayor de la tríada de Do mayor. Escenario híbrido, pero ya bastante cerca de lo que plantea el \emph{igual temperamento}: la muerte de las relaciones interválicas conformadas por sonidos acústicamente cercanos.
+  Son intervalos muy diferentes los que se usan estando en una afinación concordante con los armónicos de los sonidos como lo es la \emph{entonación justa} de los que se utilizan estando en una afinación como la del \emph{igual temperamento}. El hecho de llamar \emph{tercera mayor} tanto a un intervalo de proporción $5:4$ como a otro surgido de $2^{\frac{4}{12}}$ es muy significativo y sin dudas la raíz de tratar a esos dos intervalos tan diferentes como si fuesen el mismo intervalo.\footnote{Mientras $5:4=1.2500$, $2^{\frac{4}{12}}=1.2599$, lo que, expresado en \emph{cents}, es $386.31$ para el intervalo $5:4$ y $400.00$ para el intervalo $2^{\frac{4}{12}}$. La tercera mayor igual temperada es casi 14 \emph{cents} más grande que la tercera mayor de la afinación justa.} En un intervalo $5:4$ hay una dependencia del sonido agudo respecto al grave por ser éste representante de la fundamental de aquél, mientras que en un intervalo $2^{\frac{4}{12}}$ los sonidos que lo conforman carecen de la cercanía acústica que haga de uno de ellos un sonido dependiente del otro; son dos sonidos que se relacionan «en igualdad de condiciones», ninguno de ellos es un representante de un armónico del otro. La libertad de movimiento que tiene todo intervalo dentro del \emph{igual temperamento} es total, ya que no hay movimientos melódicos cadenciales y no-cadenciales ---todos pueden ser cadenciales y todos pueden ser no-cadenciales--- sino solamente movimientos melódicos libres, como los que ocurren entre armónicos de una fundamental ausente. En los \emph{temperamentos irregulares} como los barrocos (\textsc{Vallotti}, \textsc{Wercmeister}, etc.) estamos ante un escenario híbrido: en parte algunos intervalos permanecen puros mientras otros, de misma denominación, son acústicamente lejanos. En \textsc{Kirnberger III} ---uno de los más importantes y usados temperamentos del siglo XVIII--- se dan cuatro tipos de terceras mayores, de los cuales tres de ellas son proporciones que devienen en intervalos conformados por notas independientes, quedando únicamente una de las doce terceras mayores posibles como proporción $5:4$: la tercera mayor de la tríada de Do mayor. Escenario híbrido, pero ya bastante cerca de lo que plantea el \emph{igual temperamento}: la muerte de las relaciones interválicas conformadas por sonidos acústicamente cercanos.
 
+    \subsection*{Notación de escalas}\label{subsec:notacion-escalas}
+    Visto que el \emph{cent} es una unidad de medida cuyos números más sencillos coinciden con el igual temperamento ---los números redondos como 300, 500 o 1100 representan intervalos igual temperados--- y considerando que la escala \musncp{\relative {c'4 d e f g a b c}} no es la misma en afinación justa que en otro temperamento, propongo anotar las escalas no solamente con sus notas en el pentagrama, sino con la desviación en \emph{cents} respecto al igual temperamento que cada una de ellas tiene. Ejemplo:
+\end{multicols}
+
+\begin{figure}[ht]
+\centering
+\begin{lilypond}[notime]
+\relative{
+  \hide Stem
+  c'4^"Escala de Do mayor en afinación justa" d e f g a b c \bar "||" \break
+  c,^"Escala de Do mayor en temperamento igual" d e f g a b c \bar "||"
+}
+\addlyrics{"0" "3.9" "-13.7" "-2" "2" "-15.6" "-11.7" "0" "0" "0" "0" "0" "0" "0" "0" "0" }
+\end{lilypond}
+\caption{Dos escalas completamente distintas.}\label{fig:escalas-afinacion}
+\end{figure}
+
+\begin{multicols}{2}
   En el siglo XX se vuelve a poner sobre la mesa el tema del uso de los intervalos compuestos por notas acústicamente cercanas. \textsc{Julián Carrillo} ---compositor romántico y microtonal--- y la \emph{música espectral} dan testimonio de ello.
 
   En definitiva, las posturas de \textsc{Aristóxeno} ---mentor de la \emph{afinación justa}--- y \textsc{Pitágoras} ---precursor de los temperamentos regulares como el \emph{igual temperamento}--- en relación a la temática de la afinación en música no ha perdido vigencia a través de los tiempos hasta nuestros días, días en los que seguimos debatiéndonos entre las posibilidades combinatorias, las purezas interválicas y la búsqueda de la imposible perfección en un mundo en el que la quietud es utopía.
@@ -177,12 +195,10 @@ Los espejos han fascinado y fascinan a los seres humanos desde tiempos inmemoria
 
 \section{Movimientos}\label{sec:movimientos}
 Quietud, movimiento, intervalos melódicos y armónicos son lo mismo. Paralelismos entre voces como quietud; paralelismos como engrosamiento de una voz.
-
-
 \end{multicols}
 
 
-\begin{multicols}{2}
+
+
 \listoffigures
-\end{multicols}
 \end{document}
