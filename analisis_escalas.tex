@@ -3,6 +3,9 @@
 \usepackage{amsmath}
 \usepackage{musluatex}
 \usepackage[hidelinks]{hyperref}
+\usepackage{tcolorbox}
+\newtcolorbox{caja}[1]
+{colback=black!5!white,colframe=gray!75!black,fonttitle=\bfseries,title={#1}}
 
 \begin{document}
 \title{Análisis de escalas}
@@ -131,23 +134,45 @@ El presente artículo expone un método de análisis de escalas musicales a part
   \section{Intervalos y afinación}\label{sec:intervalos-afinacion}
 
   Son intervalos muy diferentes los que se usan estando en una afinación concordante con los armónicos de los sonidos como lo es la \emph{entonación justa} de los que se utilizan estando en una afinación como la del \emph{igual temperamento}. El hecho de llamar \emph{tercera mayor} tanto a un intervalo de proporción $5:4$ como a otro surgido de $2^{\frac{4}{12}}$ es muy significativo y sin dudas la raíz de tratar a esos dos intervalos tan diferentes como si fuesen el mismo intervalo.\footnote{Mientras $5:4=1.2500$, $2^{\frac{4}{12}}=1.2599$, lo que, expresado en \emph{cents}, es $386.31$ para el intervalo $5:4$ y $400.00$ para el intervalo $2^{\frac{4}{12}}$. La tercera mayor igual temperada es casi 14 \emph{cents} más grande que la tercera mayor de la afinación justa.} En un intervalo $5:4$ hay una dependencia del sonido agudo respecto al grave por ser éste representante de la fundamental de aquél, mientras que en un intervalo $2^{\frac{4}{12}}$ los sonidos que lo conforman carecen de la cercanía acústica que haga de uno de ellos un sonido dependiente del otro; son dos sonidos que se relacionan «en igualdad de condiciones», ninguno de ellos es un representante de un armónico del otro. La libertad de movimiento que tiene todo intervalo dentro del \emph{igual temperamento} es total, ya que no hay movimientos melódicos cadenciales y no-cadenciales ---todos pueden ser cadenciales y todos pueden ser no-cadenciales--- sino solamente movimientos melódicos libres, como los que ocurren entre armónicos de una fundamental ausente. En los \emph{temperamentos irregulares} como los barrocos (\textsc{Vallotti}, \textsc{Wercmeister}, etc.) estamos ante un escenario híbrido: en parte algunos intervalos permanecen puros mientras otros, de misma denominación, son acústicamente lejanos. En \textsc{Kirnberger III} ---uno de los más importantes y usados temperamentos del siglo XVIII--- se dan cuatro tipos de terceras mayores, de los cuales tres de ellas son proporciones que devienen en intervalos conformados por notas independientes, quedando únicamente una de las doce terceras mayores posibles como proporción $5:4$: la tercera mayor de la tríada de Do mayor. Escenario híbrido, pero ya bastante cerca de lo que plantea el \emph{igual temperamento}: la muerte de las relaciones interválicas conformadas por sonidos acústicamente cercanos.
-
-    \subsection*{Notación de escalas}\label{subsec:notacion-escalas}
-    Visto que el \emph{cent} es una unidad de medida cuyos números más sencillos coinciden con el igual temperamento ---los números redondos como 300, 500 o 1100 representan intervalos igual temperados--- y considerando que la escala \musncp{\relative {c'4 d e f g a b c}} no es la misma en afinación justa que en otro temperamento, propongo anotar las escalas no solamente con sus notas en el pentagrama, sino con la desviación en \emph{cents} respecto al igual temperamento que cada una de ellas tiene. Ejemplo:
 \end{multicols}
 
-\begin{figure}[ht]
-\centering
-\begin{lilypond}[notime]
-\relative{
-  \hide Stem
-  c'4^"Escala de Do mayor en afinación justa" d e f g a b c \bar "||" \break
-  c,^"Escala de Do mayor en temperamento igual" d e f g a b c \bar "||"
+\begin{caja}{Notación de escalas}
+{\footnotesize
+  \texttt{Visto que el \emph{cent} es una unidad de medida cuyos números más sencillos coinciden con el igual temperamento ---los números redondos como 300, 500 o 1100 representan intervalos igual temperados--- y considerando que la escala \musncp{\relative {c'2 d e f g a b c}} no es la misma en afinación justa que en otro temperamento, se propone anotar las escalas no solamente con sus notas en el pentagrama, sino con la desviación en \emph{cents} respecto al igual temperamento que cada una de ellas tiene. El siguiente ejemplo muestra dos escalas completamente diferentes:}
+
+  \begin{center}
+    \textsc{Escala de Do mayor en afinación justa:}
+
+    \begin{tikzpicture}[scale=1, transform shape]
+      \node at (0,0){\musncp[inline-staffsize=20]{c'2 d' e' f' g' a' b' c''}};
+      \node at (-2.35,0.5){\tiny 0};%do
+      \node at (-1.65,0.5){\tiny +4};%re
+      \node at (-0.9,0.5){\tiny -14};%mi
+      \node at (-0.15,0.5){\tiny -2};%fa
+      \node at (0.6,0.5){\tiny +2};%sol
+      \node at (1.35,0.5){\tiny -16};%la
+      \node at (2.1,0.5){\tiny -12};%si
+      \node at (2.85,0.5){\tiny 0};%do
+    \end{tikzpicture}
+
+    \bigskip
+
+    \textsc{Escala de Do mayor en temperamento igual:}
+
+    \begin{tikzpicture}[scale=1, transform shape]
+      \node at (0,0){\musncp[inline-staffsize=20]{c'2 d' e' f' g' a' b' c''}};
+      \node at (-2.35,0.5){\tiny 0};%do
+      \node at (-1.65,0.5){\tiny 0};%re
+      \node at (-0.9,0.5){\tiny 0};%mi
+      \node at (-0.15,0.5){\tiny 0};%fa
+      \node at (0.6,0.5){\tiny 0};%sol
+      \node at (1.35,0.5){\tiny 0};%la
+      \node at (2.1,0.5){\tiny 0};%si
+      \node at (2.85,0.5){\tiny 0};%do
+    \end{tikzpicture}
+  \end{center}
 }
-\addlyrics{"0" "3.9" "-13.7" "-2" "2" "-15.6" "-11.7" "0" "0" "0" "0" "0" "0" "0" "0" "0" }
-\end{lilypond}
-\caption{Dos escalas completamente distintas.}\label{fig:escalas-afinacion}
-\end{figure}
+\end{caja}
 
 \begin{multicols}{2}
   En el siglo XX se vuelve a poner sobre la mesa el tema del uso de los intervalos compuestos por notas acústicamente cercanas. \textsc{Julián Carrillo} ---compositor romántico y microtonal--- y la \emph{música espectral} dan testimonio de ello.
@@ -188,7 +213,20 @@ El presente artículo expone un método de análisis de escalas musicales a part
 
   \subsection{Tetracordios}\label{subsec:tetracordios}
 
-  La cercanía acústica de los grados \grado{4} y \grado{5} respecto a la tónica \grado{1} es algo que se ve reflejado en innumerables manifestaciones culturales distantes entre sí tanto en tiempo como en espacio. Una de esas manifestaciones, repetidas en múltiples culturas, consiste en las maneras de cantos \emph{antifonales} y \emph{responsoriales} encontrables en trabajos comunales, organizaciones militares o en ritos religiosos. El ejemplo \emph{b)} de la Figura~\ref{fig:dos-estructuras} representa, enmarcada en el \emph{diapasón}, la estructura basamentada tanto en el pensar a toda escala como un descenso hacia la tónica como en encontrar en sus dos notas más cercana a la tónica los puntos de apoyo para el desarrollo en el tiempo de las fuerzas internas de una escala que contenga a esas dos notas.
+  La cercanía acústica de los grados \grado{4} y \grado{5} respecto a la tónica \grado{1} es algo que se ve reflejado en innumerables manifestaciones culturales distantes entre sí tanto en tiempo como en espacio. Una de esas manifestaciones, repetidas en múltiples culturas, consiste en las maneras de cantos \emph{antifonales} y \emph{responsoriales} encontrables en trabajos comunales, organizaciones militares o en ritos religiosos. El ejemplo \emph{b)} de la Figura~\ref{fig:dos-estructuras} representa, enmarcada en el \emph{diapasón}, la estructura basamentada tanto en el pensar a toda escala como un descenso hacia la tónica como en encontrar en sus dos notas más cercanas a la tónica los puntos de apoyo para el desarrollo en el tiempo de las fuerzas internas de una escala que contenga a esas dos notas.
+
+  No es \musncp{
+    \layout {
+      \context {
+        \Voice
+        \consists Horizontal_bracket_engraver
+      }
+    }
+    {
+      \hide Stem
+      c''2\startGroup g'4\stopGroup f'\startGroup s c'2\stopGroup
+    }
+  } una organización que se pueda entender sólo con el argumento de la cercanía acústica de los grados \grado{4} y \grado{5} respecto al \grado{1}. Pertinente es hacer referencia a la comunicación en general y al diálogo en particular como modelos representados en la manera de organizar los sonidos en el tiempo basada en esta estructura. También es pertinente mencionar el sentido de \emph{simetría} que existe en melodías con antecedente y consecuente enmarcados en los límites de estos tetracordios en cuyas fronteras están las tres notas más importantes de alguna escala pentáfona o hectáfona.
 
 \section{Simetrías}\label{sec:simetrias}
 Los espejos han fascinado y fascinan a los seres humanos desde tiempos inmemoriales. La presencia de ellos en la música es más que notoria y constituye causal de estructuras fundamentales y generadora de nuevas sonoridades permanentemente.  Los tipos de espejos más comunes son el vertical y el horizontal: mientras el espejo vertical refleja horizontalmente, el espejo horizontal hace lo propio verticalmente. No importa qué refleje, al hacerlo se produce, en la unión del original y su reflejo, un objeto simétrico. Este objeto es de carácter melódico cuando él es desplegado en el tiempo y de carácter armónico cuando se concentra en un momento. O dicho de otro modo: tanto a objetos melódicos como a objetos armónicos, aunque ellos sean asimétricos, al aplicarle alguno de estos espejos (vertical, horizontal o la combinación de ambos) obtenemos, en la combinación de original e imagen espejada, un objeto más complejo que es siempre simétrico. El arpegio mayor hbox{\musncp{c''2 e''},} por tomar un ejemplo melódico, al aplicarle un espejo vertical obtenemos el objeto melódico más complejo \hbox{\musncp{c''2 e'' \bar "!" e'' c''};} al aplicarle un espejo horizontal al mismo objeto melódico, obtenemos \hbox{\musncp{c''2 e'' \bar "!" c'' aes'}.} Las notas acá participantes de los objetos, al ser utilizadas en la simultaneidad, conforman objetos que en su significado musical más profundo no son muy diferentes, es decir \musncp{c''2 e''} no es muy diferente a \hbox{\musncp{<e' c''>2},} y \musncp{e''2 c''} no difiere en demasía en el significado respecto a \hbox{\musncp{<c'' e''>2},} ya que \nota{do}{5}-\nota{mi}{5} es un movimiento melódico abierto y el acorde \nota{mi}{4}-\nota{do}{5} es un intervalo que no reposa y por lo tanto también de carácter abierto. En cambio, \musncp{e''2 c''} es un movimiento melódico cerrado, cadencial, y \musncp{<c'' e''>2} es un acorde también cerrado, con la fundamental en el bajo y un representante de un armónico propio en el agudo. Este es el motivo por el cual consideramos que la versión espejada de \musncp{<c'' e''>2} puede ser \musncp{<e' c''>2}, por ser uno el reverso semántico del otro, análogo a \musncp{c''2 e''} y \hbox{\musncp{e''2 c''}.} También es cierto que el reflejo de \musncp{<c'' e''>2} puede ser \hbox{\musncp{<aes' c''>2}.} ¿Cuál, entonces, refleja a \hbox{\musncp{<c'' e''>2}?} ¿\hbox{\musncp{<e' c''>2},} o \hbox{\musncp{<aes' c''>2}?} En un contexto de afinación natural, \hbox{\musncp{<e' c''>2},} y en un contexto de afinación igual temperada, \hbox{\musncp{<aes' c''>2}.} Los espejos de sujeto y respuesta «tonal» en las fugas del siglo XVIII ---y no únicamente en ellas---, que suponen \musncp{c'2 g' \bar "!" g' c''} confirman la necesidad de incluir en las imitaciones el factor semántico de los intervalos, siempre que se esté en un contexto de afinación natural. El siglo XVIII europeo es, en este sentido, un tiempo de experimentación y de transición desde la afinación natural hacia la afinación temperada, donde la práctica compositiva estaba más cerca del pensamiento musical surgido desde la relación de los sonidos con sus armónicos más cercanos que de la especulación sonora que se practica con los dos pies puestos sobre un temperamento igual.
