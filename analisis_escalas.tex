@@ -228,7 +228,29 @@ El presente artículo expone un método de análisis de escalas musicales a part
       \hide Stem
       c''2\startGroup g'4\stopGroup f'\startGroup s c'2\stopGroup
     }
-  } una organización que se pueda entender sólo con el argumento de la cercanía acústica de los grados \grado{4} y \grado{5} respecto al \grado{1}. Pertinente es hacer referencia a la comunicación en general y al diálogo en particular como modelos representados en la manera de organizar los sonidos en el tiempo basada en esta estructura. También es pertinente mencionar el sentido de \emph{simetría} que existe en melodías con antecedente y consecuente enmarcados en los límites de estos tetracordios en cuyas fronteras están las tres notas más importantes de alguna escala pentáfona o heptáfona.
+  } una organización que se pueda entender sólo con el argumento de la cercanía acústica de los grados \grado{4} y \grado{5} respecto al \grado{1}. Pertinente es hacer referencia a la comunicación humana en general y al diálogo en particular como modelos representados en la manera de organizar los sonidos en el tiempo basada en esta estructura. También es pertinente mencionar el sentido de \emph{simetría} que existe en melodías con antecedente y consecuente enmarcados cada uno de ellos en los límites de estos tetracordios en cuyas fronteras están las tres notas más importantes de alguna escala pentáfona o heptáfona.
+
+  Como ejemplo de estas prácticas, basado en una escala pentáfona, podemos presentar
+  \hbox{\mus{
+    \layout {
+      \context {
+        \Voice
+        \consists Horizontal_bracket_engraver
+      }
+    }
+    \transpose d c \relative {
+      \key d \minor
+      \time 4/4
+      \partial 4
+      d''8\startGroup ( c
+      a2 ) d8 ( c a g
+      a2.\stopGroup ) g8\startGroup ( f
+      d2 ) g8 ( f d c
+      d2.\stopGroup ) \bar "|."
+    }
+  },} donde el \emph{diatossaron} \musncp{c''2 g'4} enmarca al antecedente y \musncp{f' c'2} delimita al consecuente.
+
+  %TODO: ejemplo heptáfono.
 
 \section{Simetrías}\label{sec:simetrias}
 Los espejos han fascinado y fascinan a los seres humanos desde tiempos inmemoriales. La presencia de ellos en la música es más que notoria y constituye causal de estructuras fundamentales y es generadora de nuevas sonoridades permanentemente.  Los tipos de espejos más comunes son el vertical y el horizontal (mientras el espejo vertical refleja horizontalmente, el espejo horizontal hace lo propio verticalmente). No importa qué refleje, al hacerlo se produce, en la unión del original y su reflejo, un objeto simétrico. Este objeto es de carácter melódico cuando él es desplegado en el tiempo y de carácter armónico cuando se concentra en un momento.\footnote{Esta clasificación, en el fondo, es innecesaria, ya que la relación entre dos notas es siempre de carácter armónico. Sea en la simultaneidad o desplazada en el tiempo, dos elementos en relación tendrán algún grado de armonía entre ellos.} O dicho de otro modo: tanto a objetos melódicos como a objetos armónicos, aunque ellos sean asimétricos, al aplicarle alguno de estos espejos (vertical, horizontal o la combinación de ambos) obtenemos, en la combinación de original e imagen espejada, un objeto más complejo que es siempre simétrico. La tercera mayor \hbox{\musncp{c''2 e''},} por tomar un ejemplo melódico, al aplicarle un espejo vertical obtenemos el objeto melódico más complejo \hbox{\musncp{c''2 e'' \bar "!" e'' c''};} al aplicarle un espejo horizontal al mismo objeto melódico, obtenemos \hbox{\musncp{c''2 e'' \bar "!" c'' aes'}.}
@@ -237,12 +259,9 @@ Las notas acá participantes de los objetos, al ser utilizadas en la simultaneid
 
 La resurrección del arte dramático ---primero con la ópera como nuevo género y luego con el desarrollo del estilo neoclásico y romántico, arte de contrastes y conflictos que considera a la música como un lenguaje capaz de narrar sin palabras--- propició la búsqueda de llevar, al modo de un personaje de una novela moderna, a los materiales temáticos por territorios musicales, territorios éstos que fueron tomando forma en la combinación de las transformaciones a los modos mayor y menor con muchas de sus posibles variantes y con escalas cada vez más lejanas entre sí, esto último como recurso expresivo del carácter dramático requerido por la nueva estética musical. Estas son las necesidades de la adopción del igual temperamento: las necesidades de un arte musical de perfil dramático que propició el desarrollo de un oyente sensible a los cambios de escalas y que, de forma semejante a un enfermo que desarrolla tolerancia a la droga suministrada y que necesita cada vez más dosis para obtener un resultado similar, necesitó cada vez más de lo mismo, si es necesario hasta la sobredosis de modulaciones, hasta insensibilidad tonal, o la muerte del drama.
 
-
+%TODO: +5, 7dim, 9dom.
+%TODO: +6 como simetría melódica, antecedente: 64 de paso.
 
 \end{multicols}
-
-
-
-
 \listoffigures
 \end{document}
