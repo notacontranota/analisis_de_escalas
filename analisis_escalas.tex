@@ -281,8 +281,34 @@ El presente artículo expone un método de análisis de escalas musicales a part
 
   El carácter abierto de \musncp{c''2 g'4} y el doble carácter abierto y cerrado de \musncp{f'4 c'2} configuran el movimiento tonal de la melodía estructurada en tetracordios. El movimiento descendente del tetracordio superior es abierto por lo explicado ya en la sección~\ref{sec:movimientos} de la página~\pageref{sec:movimientos}; el movimiento melódico descendente del tetracordio inferior, al ser desde el \grado{4} grado hacia el \grado{1}, es un movimiento desde una fundamental hacia un representante de uno de sus armónicos ---\emph{do} es representante del armónico 3 de \emph{fa}---, y es cerrado porque se dirige a la tónica, al \grado{1}, proveyendo así al fragmento musical en su conjunto un carácter cerrado ---movimiento melódico general \musncp{c''2 c'}. Esta manera de construir una oración melódica que contiene carácter abierto y cerrado simultáneamente en uno de sus miembros tiene, en el arte musical clásico de segunda mitad del siglo XVIII, un espacio de evolución y refinamiento disgnos de ser estudiados, especialmente en la música de los dos compositores más afamados del período: \textsc{F. J. Haydn} y \textsc{W. A. Mozart}.
 
-  %TODO: mencionar terceras y quinta de figura 4. Cercanía acústica
-  %TODO: ejemplo de arpegio y tetra con escala. Cercanía energética
+  \subsection{Escala}\label{subsec:escala}
+\end{multicols}
+
+  \begin{figure}[ht]
+  \centering
+  \begin{lilypond}[notime]
+    \layout {
+      \context {
+        \Voice
+        \consists Horizontal_bracket_engraver
+      }
+    }
+    {
+      \mark \markup{\italic "c)"}
+      \hide Stem
+      <c' e' g'>2 \bar "!"
+      \slurDashed \slurUp
+      c'2 ( d'4 e'2 ) ( f'4 g'2 ) ( a'4 b' c''2 ) \bar "||"
+      \mark \markup{\italic "d)"}
+      <<{ \stemDown \hide Stem c''2} \\ {\hide Stem <g'' f'>4}>> \bar "!"
+      c''2\startGroup b'4 a' g'2\stopGroup f'\startGroup e'4 d' c'2\stopGroup \bar "||"
+    }
+  \end{lilypond}
+  \caption{Arpegio y tetracordio en la escala.}\label{fig:arp-tetra-escala}
+  \end{figure}
+
+\begin{multicols}{2}
+  La Figura~\ref{fig:arp-tetra-escala}, como podrá el lector captar velozmente, tiene directa relación con la Figura~\ref{fig:dos-estructuras} de la página~\pageref{fig:dos-estructuras}. Mientras ésta muestra las notas cercanas acústicamente, aquélla muestra no sólo éstas, sino también, en negritas, las notas cercanas energéticamente. Una vez más podemos decir, al igual que al referirnos a la escala respecto a la afinación usada, que \musncp{\relative{c' d e f g a b c}} no sabemos qué escala es, porque podría ---entre otras posibilidades--- ser %TODO: ESCALA DE DO CON ARPEGIO Y CON TETRA
 
 \section{Simetrías}\label{sec:simetrias}
 Los espejos han fascinado y fascinan a los seres humanos desde tiempos inmemoriales. La presencia de ellos en la música es más que notoria y constituye causal de estructuras fundamentales y es generadora de nuevas sonoridades permanentemente.  Los tipos de espejos más comunes son el vertical y el horizontal (mientras el espejo vertical refleja horizontalmente, el espejo horizontal hace lo propio verticalmente). No importa qué refleje, al hacerlo se produce, en la unión del original y su reflejo, un objeto simétrico. Este objeto es de carácter melódico cuando él es desplegado en el tiempo y de carácter armónico cuando se concentra en un momento.\footnote{Esta clasificación, en el fondo, es innecesaria, ya que la relación entre dos notas es siempre de carácter armónico. Sea en la simultaneidad o desplazada en el tiempo, dos elementos en relación tendrán algún grado de armonía entre ellos.} O dicho de otro modo: tanto a objetos melódicos como a objetos armónicos, aunque ellos sean asimétricos, al aplicarle alguno de estos espejos (vertical, horizontal o la combinación de ambos) obtenemos, en la combinación de original e imagen espejada, un objeto más complejo que es siempre simétrico. La tercera mayor \hbox{\musncp{c''2 e''},} por tomar un ejemplo melódico, al aplicarle un espejo vertical obtenemos el objeto melódico más complejo \hbox{\musncp{c''2 e'' \bar "!" e'' c''};} al aplicarle un espejo horizontal al mismo objeto melódico, obtenemos \hbox{\musncp{c''2 e'' \bar "!" c'' aes'}.}
