@@ -137,7 +137,7 @@ El presente artículo expone un método de análisis de escalas musicales a part
 \end{multicols}
 
 \begin{caja}{Notación de escalas e intervalos}
-{\footnotesize
+{ \label{caja:notacion-escalas} \footnotesize
   \texttt{Visto que el \emph{cent} es una unidad de medida cuyos números más sencillos coinciden con el igual temperamento ---los números redondos como 300, 500 o 1100 representan intervalos igual temperados--- y considerando que la escala \musncp{\relative {c'2 d e f g a b c}} no es la misma en afinación justa que en otro temperamento, se propone anotar las escalas no solamente con sus notas en el pentagrama, sino con la desviación en \emph{cents} respecto al igual temperamento que cada una de ellas tiene. El siguiente ejemplo muestra dos escalas completamente diferentes:}
 
   \begin{center}
@@ -308,7 +308,42 @@ El presente artículo expone un método de análisis de escalas musicales a part
   \end{figure}
 
 \begin{multicols}{2}
-  La Figura~\ref{fig:arp-tetra-escala}, como podrá el lector captar velozmente, tiene directa relación con la Figura~\ref{fig:dos-estructuras} de la página~\pageref{fig:dos-estructuras}. Mientras ésta muestra las notas cercanas acústicamente, aquélla muestra no sólo éstas, sino también, en negritas, las notas cercanas energéticamente. Una vez más podemos decir, al igual que al referirnos a la escala respecto a la afinación usada, que \musncp{\relative{c' d e f g a b c}} no sabemos qué escala es, porque podría ---entre otras posibilidades--- ser %TODO: ESCALA DE DO CON ARPEGIO Y CON TETRA
+  La Figura~\ref{fig:arp-tetra-escala}, como podrá el lector captar velozmente, tiene directa relación con la Figura~\ref{fig:dos-estructuras} de la página~\pageref{fig:dos-estructuras}. Mientras ésta muestra las notas cercanas acústicamente, aquélla muestra no sólo éstas, sino también, en negritas, las notas cercanas energéticamente. Una vez más podemos decir, al igual que en el cuadro de página~\pageref{caja:notacion-escalas}, que \musncp{\relative{\key c \minor c' d es f g aes bes c}} no sabemos qué escala es, porque podría ser ---entre otras posibilidades--- tanto \musncp{\relative {\key c \minor c'2 d4 es2 f4 g2 aes4 bes c2}} como \hbox{\musncp{\relative {\key c \minor c'2 d4 es f2 g aes4 bes c2}}.} Una escala, haciendo una analogía con la biología, es un \emph{genoma} ---arquetipo--- del cual pueden surgir múltiples \emph{fenomas} ---piezas musicales--- que compartirán entre sí características heredadas del genoma. Un fenoma como \musncp{\relative { \key c \minor \slurDashed c' ( f d es ) ( aes g ) ( f es ) ( d b c )}} emerge de \hbox{\musncp[inline-staffsize=10]{\relative {\key c \minor c'2 d4 es2 f4 g2 aes4 bes c2 bes4 aes g2 f4 es2 d4 c2}},} mientras que \\
+  \mus[inline-staffsize=10]{
+    \layout {
+      \context {
+        \Voice
+        \consists Horizontal_bracket_engraver
+      }
+    }
+    \transpose d c \relative {
+      \key d \minor
+      \tempo "Andante"
+      \time 4/4
+      \partial 4
+      d''8\startGroup ( c16 bes
+      a2 ) d8 ( c16 bes a8 g
+      a2.\stopGroup ) \break g8\startGroup ( f16 e
+      d2 ) g8 ( f16 e d8 c
+      d2.\stopGroup ) \bar "|."
+    }
+  } surge de \hbox{\musncp{\relative {\key c \minor c''2 bes4 aes g2 f es4 d c2}}.}\footnote{No es éste el ámbito para hablar de ello, pero es importante el hecho de presentar al genoma musical que supone ser una escala escrito en forma ascendente, descendente, o ascendente y descendente, ya que esto es particularmente significativo dado que indica direccionalidad de los sonidos.} Una vez más: las notas no alcanzan para caracterizar a una escala, esa es información insuficiente; la direccionalidad de los sonidos y, sobre todo, la jerarquía que cada uno de ellos tiene dentro del conjunto son datos fundamentales. Una escala es en capas. Por ejemplo, \musncp{c'1 e' g'} puede ser considerada la capa más profunda, \musncp{s2 d' s s a' s} la capa intermedia y \musncp{s4 s s f' s s b' s} la capa más superficial de la escala de Do mayor (ver Figura~\ref{fig:capas-escala}).
+\end{multicols}
+
+  \begin{figure}[ht]
+  \centering
+  \begin{lilypond}[notime]
+    \relative {
+      \hide Stem
+      c'1 d2 e1 f4 g1 a2 b4 c1
+    }
+  \end{lilypond}
+  \caption{Tres capas en la escala de Do mayor.}\label{fig:capas-escala}
+  \end{figure}
+
+\begin{multicols}{2}
+
+\noindent Si consideramos sólo la capa 3 ---la más profunda--- estamos ante una escala tritónica; con dos capas --- capas 3 y 2---, se presenta ante nosotros la escala pentatónica vista en el apartado~\ref{subsec:escala-sin-tensiones} de la página~\pageref{subsec:escala-sin-tensiones}; y lo obvio: las tres capas actuando en conjunto revelan la escala heptatónica de la Figura. Al igual que en una carta del \emph{Tarot}, en \musncp{\relative{c' d e f g a b c}} hay mucho más que lo que a simple vista se ve. Decodificar es necesario, y para ello ---también es obvio--- hay que conocer el código.
 
 \section{Simetrías}\label{sec:simetrias}
 Los espejos han fascinado y fascinan a los seres humanos desde tiempos inmemoriales. La presencia de ellos en la música es más que notoria y constituye causal de estructuras fundamentales y es generadora de nuevas sonoridades permanentemente.  Los tipos de espejos más comunes son el vertical y el horizontal (mientras el espejo vertical refleja horizontalmente, el espejo horizontal hace lo propio verticalmente). No importa qué refleje, al hacerlo se produce, en la unión del original y su reflejo, un objeto simétrico. Este objeto es de carácter melódico cuando él es desplegado en el tiempo y de carácter armónico cuando se concentra en un momento.\footnote{Esta clasificación, en el fondo, es innecesaria, ya que la relación entre dos notas es siempre de carácter armónico. Sea en la simultaneidad o desplazada en el tiempo, dos elementos en relación tendrán algún grado de armonía entre ellos.} O dicho de otro modo: tanto a objetos melódicos como a objetos armónicos, aunque ellos sean asimétricos, al aplicarle alguno de estos espejos (vertical, horizontal o la combinación de ambos) obtenemos, en la combinación de original e imagen espejada, un objeto más complejo que es siempre simétrico. La tercera mayor \hbox{\musncp{c''2 e''},} por tomar un ejemplo melódico, al aplicarle un espejo vertical obtenemos el objeto melódico más complejo \hbox{\musncp{c''2 e'' \bar "!" e'' c''};} al aplicarle un espejo horizontal al mismo objeto melódico, obtenemos \hbox{\musncp{c''2 e'' \bar "!" c'' aes'}.}
