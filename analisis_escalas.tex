@@ -136,51 +136,59 @@ El presente artículo expone un método de análisis de escalas musicales a part
   Son intervalos muy diferentes los que se usan estando en una afinación concordante con los armónicos de los sonidos como lo es la \emph{entonación justa} de los que se utilizan estando en una afinación como la del \emph{igual temperamento}. El hecho de llamar \emph{tercera mayor} tanto a un intervalo de proporción $5:4$ como a otro surgido de $2^{\frac{4}{12}}$ es muy significativo y sin dudas la raíz de tratar a esos dos intervalos tan diferentes como si fuesen el mismo intervalo.\footnote{Mientras $5:4=1.2500$, $2^{\frac{4}{12}}=1.2599$, lo que, expresado en \emph{cents}, es $386.31$ para el intervalo $5:4$ y $400.00$ para el intervalo $2^{\frac{4}{12}}$. La tercera mayor igual temperada es casi 14 \emph{cents} más grande que la tercera mayor de la afinación justa.} En un intervalo $5:4$ hay una dependencia del sonido agudo respecto al grave por ser éste representante de la fundamental de aquél, mientras que en un intervalo $2^{\frac{4}{12}}$ los sonidos que lo conforman carecen de la cercanía acústica que haga de uno de ellos un sonido dependiente del otro; son dos sonidos que se relacionan «en igualdad de condiciones», ninguno de ellos es un representante de un armónico del otro. La libertad de movimiento que tiene todo intervalo dentro del \emph{igual temperamento} es total, ya que no hay movimientos melódicos cadenciales y no-cadenciales ---todos pueden ser cadenciales y todos pueden ser no-cadenciales--- sino solamente movimientos melódicos libres, como los que ocurren entre armónicos de una fundamental ausente. En los \emph{temperamentos irregulares} como los barrocos (\textsc{Vallotti}, \textsc{Wercmeister}, etc.) estamos ante un escenario híbrido: en parte algunos intervalos permanecen puros mientras otros, de misma denominación, son acústicamente lejanos. En \textsc{Kirnberger III} ---uno de los más importantes y usados temperamentos del siglo XVIII--- se dan cuatro tipos de terceras mayores, de los cuales tres de ellas son proporciones que devienen en intervalos conformados por notas independientes, quedando únicamente una de las doce terceras mayores posibles como proporción $5:4$: la tercera mayor de la tríada de Do mayor. Escenario híbrido, pero ya bastante cerca de lo que plantea el \emph{igual temperamento}: la muerte de las relaciones interválicas conformadas por sonidos acústicamente cercanos.
 \end{multicols}
 
-\begin{caja}{Notación de escalas e intervalos}
-{ \label{caja:notacion-escalas} \footnotesize
-  \texttt{Visto que el \emph{cent} es una unidad de medida cuyos números más sencillos coinciden con el igual temperamento ---los números redondos como 300, 500 o 1100 representan intervalos igual temperados--- y considerando que la escala \musncp{\relative {c'2 d e f g a b c}} no es la misma en afinación justa que en otro temperamento, se propone anotar las escalas no solamente con sus notas en el pentagrama, sino con la desviación en \emph{cents} respecto al igual temperamento que cada una de ellas tiene. El siguiente ejemplo muestra dos escalas completamente diferentes:}
+  \begin{caja}{Notación de escalas e intervalos}
+  { \label{caja:notacion-escalas} \footnotesize
+    \texttt{Visto que el \emph{cent} es una unidad de medida cuyos números más sencillos coinciden con el igual temperamento ---los números redondos como 300, 500 o 1100 representan intervalos igual temperados--- y considerando que la escala \musncp{\relative {c'2 d e f g a b c}} no es la misma en afinación justa que en otro temperamento, se propone anotar las escalas no solamente con sus notas en el pentagrama, sino con la desviación en \emph{cents} respecto al igual temperamento que cada una de ellas tiene. El siguiente ejemplo muestra dos escalas completamente diferentes:}
 
-  \begin{center}
-    \textsc{Escala de Do mayor en afinación justa:}
+    \begin{center}
+      \textsc{Escala de Do mayor en afinación justa:}
 
-    \begin{tikzpicture}[scale=1, transform shape]
-      \node at (0,0){\musncp[inline-staffsize=20]{c'2 d' e' f' g' a' b' c''}};
-      \node at (-2.35,0.5){\tiny 0};%do
-      \node at (-1.65,0.5){\tiny +4};%re
-      \node at (-0.9,0.5){\tiny -14};%mi
-      \node at (-0.15,0.5){\tiny -2};%fa
-      \node at (0.6,0.5){\tiny +2};%sol
-      \node at (1.35,0.5){\tiny -16};%la
-      \node at (2.1,0.5){\tiny -12};%si
-      \node at (2.85,0.5){\tiny 0};%do
-    \end{tikzpicture}
+      \begin{tikzpicture}[scale=1, transform shape]
+        \node at (0,0){\musncp[inline-staffsize=20]{c'2 d' e' f' g' a' b' c''}};
+        \node at (-2.35,0.5){\tiny 0};%do
+        \node at (-1.65,0.5){\tiny +4};%re
+        \node at (-0.9,0.5){\tiny -14};%mi
+        \node at (-0.15,0.5){\tiny -2};%fa
+        \node at (0.6,0.5){\tiny +2};%sol
+        \node at (1.35,0.5){\tiny -16};%la
+        \node at (2.1,0.5){\tiny -12};%si
+        \node at (2.85,0.5){\tiny 0};%do
+      \end{tikzpicture}
 
-    \bigskip
+      \bigskip
 
-    \textsc{Escala de Do mayor en temperamento igual:}
+      \textsc{Escala de Do mayor en temperamento igual:}
 
-    \begin{tikzpicture}[scale=1, transform shape]
-      \node at (0,0){\musncp[inline-staffsize=20]{c'2 d' e' f' g' a' b' c''}};
-      \node at (-2.35,0.5){\tiny 0};%do
-      \node at (-1.65,0.5){\tiny 0};%re
-      \node at (-0.9,0.5){\tiny 0};%mi
-      \node at (-0.15,0.5){\tiny 0};%fa
-      \node at (0.6,0.5){\tiny 0};%sol
-      \node at (1.35,0.5){\tiny 0};%la
-      \node at (2.1,0.5){\tiny 0};%si
-      \node at (2.85,0.5){\tiny 0};%do
-    \end{tikzpicture}
-  \end{center}
+      \begin{tikzpicture}[scale=1, transform shape]
+        \node at (0,0){\musncp[inline-staffsize=20]{c'2 d' e' f' g' a' b' c''}};
+        \node at (-2.35,0.5){\tiny 0};%do
+        \node at (-1.65,0.5){\tiny 0};%re
+        \node at (-0.9,0.5){\tiny 0};%mi
+        \node at (-0.15,0.5){\tiny 0};%fa
+        \node at (0.6,0.5){\tiny 0};%sol
+        \node at (1.35,0.5){\tiny 0};%la
+        \node at (2.1,0.5){\tiny 0};%si
+        \node at (2.85,0.5){\tiny 0};%do
+      \end{tikzpicture}
+    \end{center}
 
-  \texttt{Los intervalos pueden anotarse, en forma similar a las escalas, en pentagrama indicando también la desviación en \emph{cents} respecto al temperamento igual, o bien adoptar nombres más completos como 3M-IT para una tercera mayor igual temperada. También es posible iegid \emph{Tercera mayor} solamente para el intervalo de proporción $5:4$ y para la relación intrevlálica $2^{\frac{4}{12}}$ utilizar simplemente la forma popularizada por la teoría \emph{Pitch Class}, en la que +4, -4 o 4 son terceras mayores igual temperadas ascendente, descendente o armótica respectivamente. Lo que sin dudas es necesario es aclarar la precisión de la afinación de los sonidos conformantes del intervalo, porque en ello están las características, las propiedades de dicho intervalo.}
-}
-\end{caja}
+    \texttt{Los intervalos pueden anotarse, en forma similar a las escalas, en pentagrama indicando también la desviación en \emph{cents} respecto al temperamento igual, o bien adoptar nombres más completos como 3M-IT para una tercera mayor igual temperada. También es posible iegid \emph{Tercera mayor} solamente para el intervalo de proporción $5:4$ y para la relación intrevlálica $2^{\frac{4}{12}}$ utilizar simplemente la forma popularizada por la teoría \emph{Pitch Class}, en la que +4, -4 o 4 son terceras mayores igual temperadas ascendente, descendente o armótica respectivamente. Lo que sin dudas es necesario es aclarar la precisión de la afinación de los sonidos conformantes del intervalo, porque en ello están las características, las propiedades de dicho intervalo.}
+  }
+  \end{caja}
 
 \begin{multicols}{2}
   En el siglo XX se vuelve a poner sobre la mesa el tema del uso de los intervalos compuestos por notas acústicamente cercanas. \textsc{Julián Carrillo} ---compositor romántico y microtonal--- y la \emph{música espectral} dan testimonio de ello.
 
   En definitiva, las posturas de \textsc{Aristóxeno} ---mentor de la \emph{afinación justa}--- y \textsc{Pitágoras} ---precursor de los temperamentos regulares como el \emph{igual temperamento}--- en relación a la temática de la afinación en música no ha perdido vigencia a través de los tiempos hasta nuestros días, días en los que seguimos debatiéndonos entre las posibilidades combinatorias, las purezas interválicas y la búsqueda de la imposible perfección en un mundo en el que la quietud es utopía.
 
+  %TODO: INTERVALOS CON Y SIN RELACIÓN CON LA FUNDAMENTAL:
+  %       SEXTAS MAYORES 5/3 Y 27/16
+  %       TERCERAS MENORES 6/5 Y 19/16
+  %       CUARTAS 4/3 Y 21/16
+  % Relación con el igual temperamento:
+  %   300 parecido a 297.5 (3m chica)
+  %   900 parecido a 905.9 (6M grande)
+  %   500 diferente a 470.8 (21/16) y parecido a 498 (4/3).
 \section{Estructuras}\label{sec:estructuras}
 \end{multicols}
 
