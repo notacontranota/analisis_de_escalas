@@ -2,6 +2,7 @@
 \usepackage{multicol}
 \usepackage{amsmath}
 \usepackage{musluatex}
+\usepackage{booktabs}
 \usepackage[hidelinks]{hyperref}
 \usepackage{tcolorbox}
 \newtcolorbox{caja}[1]
@@ -177,17 +178,62 @@ El presente artículo expone un método de análisis de escalas musicales a part
   \end{caja}
 
 \begin{multicols}{2}
-  Lo mejor en este punto es hacer una breve comparación entre la afinación justa y el temperamento igual en tres cuestiones primordiales, dado el rumbo que tomaron los acontecimientos hitóricos musicales. Sumamente importante es recalcar que un intervalo melódico que se mueve desde un representante de un armónico hacia su fundamental o un intervalo armónico que tiene a un representante de un armónico en el agudo y su fundamental en el grave son intervalos que representan quietud, mientras sus opuestos, intervalo melódico que parte de una fundamental hacia un representante de un armónico suyo o un intervalo armónico con un representante de un armónico en el grave y su fundamental en el agudo son intervalos que representan movimiento. Dicho esto, pasemos a analizar los tres intervalos más importantes a los fines de comparar estas dos afinaciones.
+  Lo mejor en este punto es hacer una breve comparación entre la afinación justa, la afinación espectral y el temperamento igual en tres intervalos primordiales, dado el rumbo que tomaron los acontecimientos históricos musicales en el paso de la antigüedad a la modernidad en Europa. Sumamente importante es recalcar que un intervalo melódico que se mueve desde un representante de un armónico hacia su fundamental o un intervalo armónico que tiene a un representante de un armónico en el agudo y su fundamental en el grave son intervalos que representan quietud, mientras sus opuestos, intervalo melódico que parte de una fundamental hacia un representante de un armónico suyo o un intervalo armónico con un representante de un armónico en el grave y su fundamental en el agudo, son intervalos que representan movimiento. Dicho esto, pasemos a analizar los tres intervalos más importantes a los fines de comparar estas dos afinaciones.
 
-  %TODO: INTERVALOS CON Y SIN RELACIÓN CON LA FUNDAMENTAL:
-  %       SEXTAS MAYORES 5/3 Y 27/16
-  %       TERCERAS MENORES 6/5 Y 19/16
-  %       CUARTAS 4/3 Y 21/16
-  % Relación con el igual temperamento:
-  %   300 parecido a 297.5 (3m chica)
-  %   900 parecido a 905.9 (6M grande)
-  %   500 diferente a 470.8 (21/16) y parecido a 498 (4/3).
+  La quinta justa, la tercera mayor, la tercera menor y la cuarta justa son los intervalos elegidos para su análisis comparativo en la afinación de \textsc{Aristóxeno} (afinación justa), el temperamento igual, de inspiración pitagórica, y la afinación espectral, de espíritu aristoxénico, surgida de lo dictado por los armónicos de una fundamental para la construcción de todo el espectro cromático. Son éstos los intervalos elegidos porque son los que estructuran al sistema tonal: La quinta justa es la unidad de medida de la distancia acústica de los sonidos, la tercera mayor define en gran medida el carácter del modo mayor y el grado de estabilidad del acorde de tónica, y la tercera menor hace lo propio para el modo y el acorde de tónica menor, mientras la cuarta justa define la presencia polar del \grado{4} grado, rival de la tónica tanto en el modo mayor como en el menor.
+\end{multicols}
 
+  \begin{table}[ht]
+  \centering
+  \caption{Comparación de la 3M en las tres afinaciones.}\label{tab:3M}
+  \begin{tabular}{@{}llll@{}}
+  \toprule
+  Intervalo           & Proporción  & Cociente  & Cents   \\ \midrule
+  Tercera mayor A.J.  & $5:4$       & $1.2509$  & $386.3$ \\
+  Tercera mayor T. I. & $2^{4/12}$  & $1.2599$  & $400.0$ \\ \bottomrule
+  \end{tabular}
+  \end{table}
+
+
+  \begin{table}[ht]
+  \centering
+  \caption{Comparación de la 3m en las tres afinaciones.}\label{tab:3m}
+  \begin{tabular}{@{}llll@{}}
+  \toprule
+  Intervalo               & Proporción  & Cociente & Cents   \\ \midrule
+  Tercera menor A.J.      & $6:5$       & $1.2000$ & $386.3$ \\
+  Tercera menor espectral & $19:16$     & $1.1875$ & $297.5$ \\
+  Tercera menor T.I.      & $2^{3/12}$  & $1.1892$ & $300.0$ \\ \bottomrule
+  \end{tabular}
+  \end{table}
+
+  \begin{table}[ht]
+  \centering
+  \caption{Comparación de la 5J en las tres afinaciones.}\label{tab:5J}
+  \begin{tabular}{llll}
+  \hline
+  Intervalo                 & Proporción  & Cociente & Cents   \\ \hline
+  Quinta justa A.J. y A.E.  & $3:2$       & $1.5000$ & $701.9$ \\
+  Quinta justa T.I.         & $2^{7/12}$  & $1.4983$ & $700.0$ \\ \bottomrule
+  \end{tabular}
+  \end{table}
+
+  \begin{table}[ht]
+  \centering
+  \caption{Comparación de la 4J en las tres afinaciones.}\label{tab:4J}
+  \begin{tabular}{llll}
+  \hline
+  Intervalo          & Proporción & Cociente & Cents    \\ \hline
+  Cuarta justa A.J.  & $4:3$      & $1.3333$ & $498.0$  \\
+  Cuarta justa A.E.  & $21:16$    & $1.3125$ & $470.78$ \\
+  Cuarta justa T.I.  & $2^{5/12}$ & $1.3348$ & $500.0$  \\ \bottomrule
+  \end{tabular}
+  \end{table}
+
+\begin{multicols}{2}
+  En los Cuadros~\ref{tab:3M}, \ref{tab:3m}, \ref{tab:5J} y \ref{tab:4J} se presentan algunos números representativos de los intervalos acá comparados que a continuación, tras su interpretación, nos revelarán un importante cambio en cómo percibimos los modos mayor y menor en las tres afinaciones.
+
+  %TODO: 4J 683/512 como más cercana a la inversión de la 5J.
   En el siglo XX se vuelve a poner sobre la mesa el tema del uso de los intervalos compuestos por notas acústicamente cercanas. \textsc{Julián Carrillo} ---compositor romántico y microtonal--- y la \emph{música espectral} dan testimonio de ello.
 
   En definitiva, las posturas de \textsc{Aristóxeno} ---mentor de la \emph{afinación justa}--- y \textsc{Pitágoras} ---precursor de los temperamentos regulares como el \emph{igual temperamento}--- en relación a la temática de la afinación en música no ha perdido vigencia a través de los tiempos hasta nuestros días, días en los que seguimos debatiéndonos entre las posibilidades combinatorias, las purezas interválicas y la búsqueda de la imposible perfección en un mundo en el que la quietud es utopía.
@@ -217,6 +263,7 @@ El presente artículo expone un método de análisis de escalas musicales a part
 \end{figure}
 
 \begin{multicols}{2}
+\section{Estructuras}\label{sec:estructuras}
   \subsection{Arpegio}\label{subsec:arpegio}
   La cercanía acústica de los grados \grado{5} y \grado{3} respecto al \grado{1} propone, en una música que tenga como notas estructurales a estos tres grados, un juego bidireccional de los movimientos melódicos: abiertos cuando la línea melódica se dirige desde \grado{1} hacia \grado{3} o \grado{5}, y cerrados cuando la línea melódica direcciona sus movimientos desde los grados \grado{5} y \grado{3} hacia el \grado{1} grado. Mientras los movimientos melódicos se produzcan entre \grado{3} y \grado{5} el transcurrir melódico nos deposita en una zona de no-definición, de prolongación de lo abierto e irresuelto. Una baguala\footnote{Una baguala es una pieza musical característica de la zona de montaña del norte argentino (provincias de Salta y Jujuy) de carácter improvisatorio basada en una escala tritónica donde fundamental, quinta y tercera juegan acompañadas de una caja, instrumento de percusión también típico de esta región.}, que además de usar las notas de la estructura arpegio excluye a otras notas, desnuda y revela con más facilidad lo anteriormente dicho: \mus{\time 3/4 \relative c' {c4. 8 e4 g4. e8 g4 g4 e2}} es una frase que, estructuralmente se hace \musncp{\hide Stem c'2 e' g' e'} es decir un movimiento no-cadencial \musncp{c'2 e'} seguido de una prolongación de lo abierto en \musncp{e'2 g' e'} haciendo de toda la frase musical un fragmento de carácter abierto, irresuelto; el consecuente habitual de esta frase suele ser, típicamente, \mus{\time 3/4 \relative g'{g4. e8 g4 4. e8 c4 4 2 \bar "|."}} que cierra con el movimiento melódico cadencial \musncp{e'2 c'} el cual es antecedico por la prolongación de lo abierto con las notas\hbox{\musncp{g'2 e' g' e'}.}
 
@@ -367,4 +414,5 @@ La resurrección del arte dramático ---primero con la ópera como nuevo género
 
 \end{multicols}
 \listoffigures
+\listoftables
 \end{document}
