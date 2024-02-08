@@ -396,21 +396,122 @@ La asimetría existente en el acorde mayor, en una afinación natural o justa no
 \begin{figure}[ht]
 \centering
 \begin{lilypond}[notime]
-\relative {
-  \hide Stem
-  <g' b dis>2 \bar "||"
-  <b d f aes> \bar "||"
-  <g b d f a> \bar "||"
+\include "harmonyli.ly"
+
+\score {
+  \new Staff \relative {
+    <g' b dis>1 \bar "||"
+    <b d f aes> \bar "||"
+    <g b d f a> \bar "||"
+  }
+  \addlyrics {
+    \markup \setHas "D" #'(("a"."5♯"))
+    \markup \setHas "D" #'(("a"."7")("b"."9♭")("T"."x"))
+    \markup \setHas "D" #'(("a"."7")("b"."9"))
+  }
+  \layout {
+    \context {
+      \Lyrics \consists "Text_spanner_engraver"
+    }
+  }
 }
 \end{lilypond}
 \caption{Simetría y movimiento: tres acordes centrales.}\label{fig:+5-7dim-9D}
 \end{figure}
 
 \begin{multicols}{2}
-A diferencia de los acordes mayor y menor, estructuralmente asimétricos, los tres acordes de la Figura~\ref{fig:+5-7dim-9D} tienen en común su evidente simetría.\footnote{El acorde de +5 está compuesto de dos terceras mayores de cuatros semitonos cada una, dividiendo a la octava en tres partes de idéntico tamaño; el acorde de séptima disminuida posee cuatro terceras menores de tres semitonos cada una que dividen a la octava en cuatro partes iguales; el acorde de novena dominante posee en sus extremos grave y agudo terceras mayores y en el centro dos terceras menores, en una combinación de ambos intervalos que dibujan también una simetría.}
+A diferencia de los acordes mayor y menor, estructuralmente asimétricos, los tres acordes de la Figura~\ref{fig:+5-7dim-9D} tienen en común su evidente simetría y su inicial función dominante dentro del contexto tonal del siglo XVIII.\footnote{El acorde de +5 está compuesto de dos terceras mayores de cuatros semitonos cada una, dividiendo a la octava en tres partes de idéntico tamaño; el acorde de séptima disminuida posee cuatro terceras menores de tres semitonos cada una que dividen a la octava en cuatro partes iguales; el acorde de novena dominante posee en sus extremos grave y agudo terceras mayores y en el centro dos terceras menores, en una combinación de ambos intervalos que dibujan también una simetría.} Junto a los acordes de sexta aumentada, estos tres acordes atrajeron todos los reflectores de la armonía romántica, y no porque sí. Los dos primeros acordes ---el \acorde.D..5\sostenidotxt... y el \acorde.\Dohne..9\bemoltxt.7..--- emergen históricamente del modo menor: el \acorde.D..5\sostenidotxt... como \acorde.III..\sostenidotxt5... resolviendo en el VI grado, y el \acorde.\Dohne..9\bemoltxt.7.. como un \acorde.V..\bemoltxt9.7.. grado con su fundamental omitida cadenciando en I. El tercer acorde de la Figura~\ref{fig:+5-7dim-9D} --- el \acorde.D..9.7..--- tiene su aparición histórica en el modo mayor como \acorde.V..9.7.. resolviendo en I.
+
+En contexto tonal, estos acordes tienen atributos contradictorios, ya que por un lado son muy propensos al movimiento por los intervalos que contienen y por el movimiento por semitonos a los que invitan en algunas de sus voces, y por otro lado son propensos a la quietud por el simple hecho de ser simétricos. Lo simétrico, por equilibrado, no necesita moverse. La contradicción, finalizando el siglo XIX en Europa, se fue resolviendo hacia la percepción de lo simétrico como quietud antes que de lo interválico como movimiento, con seguridad apoyado esto por el afianzamiento del igual temperamento como convención en la afinación musical.
+
+El camino en el que estos acordes pasaron de un significado inequívoco a otro multisémico y, finalmente, a la libertad de movimiento ---o de quietud---, puede ser transitado siguiendo la trayectoria del \acorde.\Dohne..9\bemoltxt.7..: originalmente nace, por alteración \emph{ficta} del \grado{7} grado del modo menor, al tiempo que se sostiene al \grado{6} como sensible descendente hacia el \grado{5} grado, dando como resultado, en Do menor, \hbox{\musncp{̣\relative{\key c \minor <b' d f aes> <c es g>}};} luego, trasladado al modo mayor, el mismo acorde adquiere una nueva posibilidad resolutiva en \hbox{\musncp{̣\relative{<b' d f aes> <c e g>}};} la reinterpretación enarmónica del \emph{la\bemoltxt} por \emph{sol\sostenidotxt} le otorga al acorde dos resoluciones más: sobre los acordes \musncp{<a' c'' e''>} y \hbox{\musncp{\key a \major <a' cis'' e''>};} al poseer esta estructura sonora dos tritonos ---\musncp{<b' f''>} y \hbox{\musncp{<d'' aes''>}---,} de cuatro las resoluciones posibles pasan a ser ocho ---cuatro en modos mayores y cuatro en sus homónimos menores---, convirtiéndose este acorde en una especie de vórtice que permite transitar el universo cromático por regiones remotas en relación al centro tonal sin embajadas ni cartas de presentación.
+
+El \acorde.\Dohne..9\bemoltxt.7.. en contexto de doce notas tiene tres versiones a distancia de semitono, abarcando así el total cromático. Si se ordenan dos de sas trev versiones del acorde en cuestión, estando ellos a distancia de tono entre sí, se obtiene una escala simétrica conocida como \emph{escala octatónica}.
+\end{multicols}
+
+\begin{figure}[ht]
+\centering
+\begin{lilypond}[notime]
+\layout {
+  \context {
+    \Voice
+    \consists Horizontal_bracket_engraver
+  }
+}
+\relative {
+  \hide Stem
+  c'2\startGroup d4 ( es2\stopGroup ) f4 ( ges2 ) aes4 ( a2 ) b4 ( c2 )
+}
+\end{lilypond}
+\caption{Escala octatónica.}\label{fig:escala-octatonica}
+\end{figure}
+
+\begin{multicols}{2}
+En la Figura~\ref{fig:escala-octatonica} se observa que, en blanquitas, está, desplegado, el acorde \musncp{<c' es' ges' a'>2}, y, en negritas, el acorde \hbox{\musncp{<d' f' aes' b>}.} También se observa que, marcada con un corchete, está la estructura interválica \emph{t-st}, patrón que se repite en toda la escala reiniciando siempre sobre una nota en blanquita. Si se aplica algo de lo hasta acá estudiado en relación a análisis de escalas, nos tiene que llamar la atención la cantidad de semitonos que esta escala posee. Lo recordemos: \emph{donde hay semitonos pasan cosas importantes}. La máxima cercanía energética del sistema propicia el dramatismo por dar a muchas notas la posibilidad de convertirse en centro, en tónica. No olvidemos que los semitonos deben interpretarse tanto como sensibles ascendentes como descendentes, siendo el semitono \musncp{d' es'} un ámbito favorable tanto para el \musncp{d'} como para el \musncp{es'} para la lucha por el lugar de privilegio en la escala.
+\end{multicols}
+
+\begin{figure}[ht]
+\centering
+\begin{lilypond}[notime]
+\relative {
+  \tempo 4=80
+  c'^\mf d es f ges2 f2.
+  fis4 gis a b2 c1
+  c4^\f d es f es d c b1 \bar "||"
+}
+\addlyrics {
+  I -- re -- mos a e -- llos
+  por -- que con -- fí -- an
+  en la bon -- dad de los de -- más.
+}
+\end{lilypond}
+\caption{Melodía octatónica en «VI. Víctimas de un monstruo humano», movimiento de \emph{Oratorio de la Infancia}, de \textsc{Pablo Herrera}.}\label{fig:melodia-octatonica}
+\end{figure}
+
+\begin{multicols}{2}
+«E\textbf{llos}», «confí\textbf{an}» y «de\textbf{más}» son los puntos de llegada de las frases (ver Figura~\ref{fig:melodia-octatonica}). La primera, llega a \nota{fa}{4} desde su semitono superior \hbox{\musncp{ges' f'};} la segunda, a \nota{do}{5} desde su semitono inferior \hbox{\musncp{b' c''};} y la tercera, a \nota{si}{4} desde su semitono superior \hbox{\musncp{c'' b'}.} Así, \emph{fa}, \emph{do} y \emph{si} se convierten, sucesivamente, en centros de esta línea melódica. El conjunto, lejos de una estabilidad tonal, adquiere así el carácter dramático que la temática de la obra requiere.\footnote{\emph{Oratorio de la Infancia} es la música de una obra multidisciplinaria de idéntico nombre que toma como temática sobresaliente la violencia ejercida sobre los niños en la sociedad Salteña durante el siglo XX.}
+
+\emph{A más semitonos, más carácter dramático}. Cabe acá, pues, a modo de paréntesis, preguntar si la escala cromática es la más dramática de las escalas dentro de un sistema con doce notas. No perdamos de vista la frase \emph{«a más semitonos, más carácter dramático»}. Establezcamos una analogía entre esta frase y esta otra: \emph{«a más dinero, más rico»}. Está claro que, dado un conjunto finito de notas ---las doce convencionales---, la escala cromática posee \emph{todos los semitonos}. ¿Qué pasa si alguien posee \emph{todo el dinero} del mundo? No está de más decirlo: la escala cromática \emph{es simétrica}, y por lo tanto, presentada en totalidad, \emph{estable por sí sola}. La misma contradicción que inicialmente encontramos en los acordes de la Figura~\ref{fig:+5-7dim-9D} de la página~\pageref{fig:+5-7dim-9D}, hallamos en la escala cromática: las mayores posibilidades de movimiento por poseer todos los semitonos y la mayor posibilidad de quietud por poseer toda la simetría posible dentro del juego de doce notas. Al igual que lo sucedido con los acordes estudiados, la resolución histórica inclinó la balanza hacia la valoración de lo simétrico por sobre lo dinámico, llevando a la \emph{serie dodecafónica} al lugar de «unidad de medida» de la música de la primera mitad del siglo XX e introduciendo ---o reintroduciendo--- un modo de pensar y organizar los mundos sonoros que trasciende largamente a la \emph{segunda escuela de Viena}.
+\end{multicols}
+
+\begin{figure}[ht]
+\centering
+\begin{lilypond}[notime]
+\include "harmonyli.ly"
+\layout {
+  \context {
+    \Lyrics \consists "Text_spanner_engraver"
+  }
+}
+\relative {
+  \mark \markup{ \italic "a)" }
+  <g' b dis>1
+  <a cis f> \bar "!"
+  \mark \markup{ \italic "b)" }
+  <g b d! d f a> <g b des! dis! f a> \bar "||"
+  \mark \markup{ \italic "c)" }
+  \hide Stem
+  g2 a4 b2 cis!4 dis!2 f4 g2 \bar "||"
+}
+\addlyrics {
+  \markup \setHas "D" #'(("a"."5♯"))
+  \markup \setHas "D" #'(("a"."5♯"))
+  \markup \setHas "D" #'(("a"."7")("b"."9"))
+  \markup \setHas "D" #'(("a"."5♭")("b"."5♯")("c"."7")("d"."9"))
+}
+\end{lilypond}
+\caption{Escala por tonos: +5 y novena dominante en ella.}\label{fig:escala-tonos}
+\end{figure}
+
+\begin{multicols}{2}
+Los acordes \acorde.D..5\sostenidotxt... y \acorde.D..9.7.. aportan a la conformación de otra de las escalas simétricas surgidas de la práctica musical tonal: la escala por tonos o escala hexatónica. Así como cuando un acorde \acorde.\Dohne..9\bemoltxt.7.. adquiere autonomía respecto al V grado y puede enlazarse con otra versión de sí mismo situada a distancia de tono y dar nacimiento a la escala octatónica, en forma análoga el acorde \acorde.D..5\sostenidotxt... enlazado con una versión de sí mismo a distancia de tono puede dar origen a la escala por tonos (ver \emph{a)} en la Figura~\ref{fig:escala-tonos}). La armonía cromática vagneriana, cuya práctica incluye las alteraciones dobles como lo presentado en \emph{b)}, permite explicar el surgimiento de la escala hexatonal en la escena de la música europea del siglo XIX: el acorde estelar del romanticismo, el \acorde.D..9.7.., trabajado a seis voces con la quinta duplicada, al ser conducido cromáticamente hacia el \acorde.D..9.5\sostenidotxt.5\bemoltxt. ---para que a su vez éste se dirija a T--- generará un ámbito armónico propicio para el desarrollo melódico basado en la escala por tonos.
+
+Acordes simétricos generando escalas simétricas en el contexto general de la más simétricas de las escalas: la escala cromática afinada con el igual temperamento. Tal es el marco en el que se desarrollaron estos tres acordes ---quinta aumentada, séptima disminuida y novena dominante--- y estas dos escalas ---por tonos y octatónica.
+
 
 
 %TODO: +6 como simetría melódica, antecedente: 64 de paso.
+%TODO: CONSTRUCCIÓN DE ESCALAS.
 
 \end{multicols}
 \listoffigures
