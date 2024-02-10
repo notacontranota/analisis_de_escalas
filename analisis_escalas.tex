@@ -3,6 +3,7 @@
 \usepackage{amsmath}
 \usepackage{musluatex}
 \usepackage{booktabs}
+\usepackage{float}
 \usepackage{amsmath}
 \usepackage[hidelinks]{hyperref}
 \usepackage{tcolorbox}
@@ -390,6 +391,8 @@ Las notas acá participantes de los objetos, al ser utilizadas en la simultaneid
 
 La resurrección del arte dramático ---primero con la ópera como nuevo género y luego con el desarrollo del estilo neoclásico y romántico, arte de contrastes y conflictos que considera a la música como un lenguaje capaz de narrar sin palabras--- propició la búsqueda de llevar, al modo de un personaje de una novela moderna, a los materiales temáticos por territorios musicales, territorios éstos que fueron tomando forma en la combinación de las transformaciones a los modos mayor y menor con muchas de sus posibles variantes y con escalas cada vez más lejanas entre sí, esto último como recurso expresivo del carácter dramático requerido por la nueva estética musical. Estas son las necesidades de la adopción del igual temperamento: las necesidades de un arte musical de perfil dramático que propició el desarrollo de un oyente sensible a los cambios de escalas y que, de forma semejante a un enfermo que desarrolla tolerancia a la droga suministrada y que necesita cada vez más dosis para obtener un resultado similar, necesitó cada vez más de lo mismo, si es necesario hasta la sobredosis de modulaciones, hasta insensibilidad tonal, o la muerte del drama.
 
+\bigskip
+
 La asimetría existente en el acorde mayor, en una afinación natural o justa no supone inestabilidad por las proporciones que anclan la sonoridad a una fundamental. En cambio, en el igual temperamento esta sonoridad queda con la asimetría y sin el equilibrio acústico, sin más compensación que la de su espejo, el acorde menor, el cual también es una asimetría, pero con más equilibrio acústico que el acorde mayor. La nueva realidad en un sistema cromático, simétrico por todos sus semitonos de idéntico tamaño, permite encontrar nuevas formas de estabilidad que, en principio, entran en contradicción con las antiguas formas de generar movimiento. Los tres ejemplos clásicos de esta nueva realidad los dan los acordes de quinta aumentada, séptima disminuida y novena dominante. Los tres, desde una mirada antigua, son generadores de movimiento, a tal punto que su utilización más frecuente es en procesos cadenciales con función dominante.
 \end{multicols}
 
@@ -506,12 +509,91 @@ En la Figura~\ref{fig:escala-octatonica} se observa que, en blanquitas, está, d
 \begin{multicols}{2}
 Los acordes \acorde.D..5\sostenidotxt... y \acorde.D..9.7.. aportan a la conformación de otra de las escalas simétricas surgidas de la práctica musical tonal: la escala por tonos o escala hexatónica. Así como cuando un acorde \acorde.\Dohne..9\bemoltxt.7.. adquiere autonomía respecto al V grado y puede enlazarse con otra versión de sí mismo situada a distancia de tono y dar nacimiento a la escala octatónica, en forma análoga el acorde \acorde.D..5\sostenidotxt... enlazado con una versión de sí mismo a distancia de tono puede dar origen a la escala por tonos (ver \emph{a)} en la Figura~\ref{fig:escala-tonos}). La armonía cromática vagneriana, cuya práctica incluye las alteraciones dobles como lo presentado en \emph{b)}, permite explicar el surgimiento de la escala hexatonal en la escena de la música europea del siglo XIX: el acorde estelar del romanticismo, el \acorde.D..9.7.., trabajado a seis voces con la quinta duplicada, al ser conducido cromáticamente hacia el \acorde.D..9.5\sostenidotxt.5\bemoltxt. ---para que a su vez éste se dirija a T--- generará un ámbito armónico propicio para el desarrollo melódico basado en la escala por tonos.
 
-Acordes simétricos generando escalas simétricas en el contexto general de la más simétricas de las escalas: la escala cromática afinada con el igual temperamento. Tal es el marco en el que se desarrollaron estos tres acordes ---quinta aumentada, séptima disminuida y novena dominante--- y estas dos escalas ---por tonos y octatónica.
+Acordes simétricos generando escalas simétricas en el contexto general de la más simétricas de las escalas: la escala cromática afinada con el igual temperamento. Tal es el marco en el que se desarrollaron estos tres acordes ---quinta aumentada, séptima disminuida y novena dominante--- y estas dos escalas ---hexatónica y octatónica.
+
+\bigskip
+
+Muchos acordes sistematizados, hoy con entidad propia tienen su origen en ancestrales prácticas contrapuntísticas, también vinculadas ellas a la noción de simetría. En un tiempo ---el de la música antigua europea--- en el que lo artístico era lo diverso por sobre lo repetitivo, el movimiento contrario de las voces fue el preferido. Por configuraciones melódicas, primero a dos voces y luego a más, como, por ejemplo, \musncp{ \relative { << {e''2 d c} \\ {c,2 d e} >> } } que con la inclusión de una tercera voz, es que emerge el llamado acorde sexta cuarta de paso \hbox{\musncp{ \relative { << {e''2 d c} \\ {c,2 d e} \\ {g1.} >> } }.} De manera similar, pero con una muy significativa diferencia, emergen los llamados acordes de sexta aumentada, importantes protagonistas del universo armónico tonal en general y del romanticismo en particular. La similitud está dada por el movimiento contrario de las voces que introducen el intervalo de sexta aumentada, y la significativa diferencia está dada por la naturaleza diversa de las dos voces que conforman el movimiento contrapuntístico. La llamada \emph{cláusula vera} ---cadencia auténtica---, a dos, es una sexta que se abre a una octava por grado conjunto y movimiento contrario de las voces como, por ejemplo, en modo Frigio, \hbox{\musncp{<<{d''2 e''1}\\{f'2 ( e'1 ) \bar "|."}>>};} en modo jónico, \hbox{\musncp{ <<{dis''2 ( e''1 )}\\{fis'2 e'1 }>> \bar "|." },} el semitono, a diferencia de la cadencia en modo Frigio, es ascendente y está en la voz superior, pero igualmente es una sexta mayor abriéndose a una octava justa. Sabemos que los modos mayor y menor, en gran medida, resumen en ellos las prácticas modales que los precedieron históricamente. Los modos Dórico y Frigio se encuentran en los tetracordios inferior y superior del modo Eólico, base del modo menor, el cual también con sus mutaciones del segundo tetracordio contiene la representación del modo Jónico, representación que se encuentra completa en el modo mayor, en el cual a su vez hallamos apariciones de los modos Lidio y Mixolidio al modular a la dominante y la subdominante respectivamente. Ya notamos, más arriba, que el \acorde.\Dohne..9\bemoltxt.7.., al contener ---en términos de La menor--- \musncp{gis'} y \musncp{f''!} simultáneamente, se percibe en él la presencia de la versión jónica del segundo tetracordio en el \nota{sol\sostenidotxt}{4} y de la versión frigia del mismo en el \nota{fa}{5}. Una especie de bimodalidad en las tonalidades menores que se hallan en innumerables pasajes de la literatura musical clásica. Ejemplo de esto último puede ser el pasaje de una fuga a tres voces de \textsc{J. S. Bach} en Do mayor, del libro \emph{Pequeños preludios y fugas}, donde se observa, en un contrapunto invertible desarrollado en la región relativa menor de la subdominante (re menor), el manejo de los tetracordios Frigio y Jónico en simultáneo: \mus{\relative {<<{r8 d'' cis b! cis d b! cis d f e d e bes' a g f}\\{r8 f, e d e bes' a g f d cis b! cis d b! cis d }>>}} encontrándose con goce de buena salud la falsa relación \emph{si\bemoltxt}-\emph{si\becuadrotxt} ---y no olvidemos que la llamada \emph{falsa relación} no es otra cosa que la manifestación de dos escalas diferentes tratadas en la simultaneidad. El tetracordio Frigio \musncp{d''2 c''!4 bes' a'2} y el Jónico \hbox{\hbox{\musncp{a'2 b!'4 cis'' d''2},},} ambos sonando en simultáne, lo repetimos, es prácticamente moneda corriente en las tonalidades menores, y en esta práctica no es difícil ver el germen de la politonalidad. La denominada \emph{cadencia frigia}, tan usual en el lenguaje tonal convencional sobre un V grado del modo menor, no hace otra cosa que recrear la antigua \emph{cláusula vera} del modo frigio \musncp{<<{d''2 e''1}\\{f'2 e'1}>> \bar "|."} en una versión armónicamente más compleja \hbox{\musncp{<<{d''2 e''1}\\{f'2 e'1}\\{a'2 gis'1}>> \bar "|."}.} La versión jónica de esta misma cadencia es \hbox{\musncp{<<{dis''2 e''1}\\{fis'2 e'1}\\{a'2 gis'1}>> \bar "|."}.} ¿Es acaso descabellado pensar que, con una antecesora lógica ---consciente o subconsciente--- de la práctica bimodal en las cadencias del modo menor, se haya producido la combinación de las cadencias frigia y jónica \emph{simultáneamente} dirigiéndose al \grado{5} grado de un modo menor primero, y luego, por migración, también en el modo mayor (ver \emph{b)} en la Figura~\ref{fig:ac-+6})?
+\end{multicols}
+
+\begin{figure}[H]
+\centering
+\begin{lilypond}[notime]
+\layout {
+  \context {
+    \Voice
+    \consists Horizontal_bracket_engraver
+  }
+}
+<<
+  \relative {
+    \mark \markup {\italic "a)"}
+    <<
+      {
+        \hide Stem
+        \once \override HorizontalBracket.direction = #UP
+        b'2^\markup {\tiny "Tetracordio Jónico"}\startGroup cis4 dis! e2\stopGroup
+      }
+      \\
+      {
+        \hide Stem
+        a,2_\markup {\tiny "Tetracordio Frigio"}\startGroup g4 f! e2\stopGroup
+      }
+    >> \bar "||"
+  }
+  \figures {
+    <2>2
+    <4\+>4
+    <6\\>
+    <8>2
+  }
+>>
+\end{lilypond}
+
+\bigskip
+
+\begin{lilypond}[notime,ragged-right]
+<<
+  \new Staff \relative {
+    \mark \markup {\italic "b)"}
+    <<
+      {d''2^\markup {\tiny "Cadencia Frigia"} e1}
+      \\
+      {f,2 (e1 )}
+    >> \bar "|."
+    <<
+      {dis'2^\markup {\tiny "Cadencia Jónica"} ( e1 )}
+      \\
+      {fis,2 e1}
+    >> \bar "|."
+    <<
+      {dis'!2^\markup {\tiny "Cadencia Frigia y Jónica"} ( e1 )}
+      \\
+      {f,2 ( e1 )}
+    >> \bar "|." \break
+    \mark \markup {\italic "c)"}
+    <f a dis!>2^"+6 italiano" <e gis e'>1 \bar "!"
+    <f a b dis!>2^"+6 francés" <e gis b e>1 \bar "!"
+    <f a c dis!>2^"+6 alemán" <e gis b e>1 \bar "||"
+  }
+  \new FiguredBass \figuremode {
+    <6>2 <8>1
+    <6>2 <8>1
+    <6\\>2 <8>1
+    <6\\>2 r1
+    <6\\>2 r1
+    <6\\>2 r1
+  }
+>>
+\end{lilypond}
+\caption{Cadencia frigia y jónica simultáneas: acordes de sexta aumentada}\label{fig:ac-+6}
+\end{figure}
 
 
+\begin{multicols}{2}
+El cadenciar sobre el V grado de un modo menor con el enlace armónico \acorde.\DD..7...-- \acorde.D..... implica la presencia del tetracordio «superior» de una escala con centro en \emph{mi} ---pensando en La menor--- \musncp{\relative{b'2 cis4 dis e2}}. De ahí el tetracordio ascendente jónico en \emph{a)} (ver Figura~\ref{fig:ac-+6}); el tetracordio descendente \musncp{\relative {a'2 g4 f e2}} es el habitual tetracordio superior ---esta vez sin comillas--- del modo Eólico. Al igual que con la \emph{cadencia frigia}, donde la diferencia entre la versión a dos voces es la \emph{cláusula vera} y ella es lo mismo con algún aditivo por suma de alguna otra voz, los afamados acordes de sexta aumentada italiano, francés, alemán o suizo no son otra coma sino complejizaciones por el uso de una polifonía mayor del original movimiento a dos voces +6--8.
 
-%TODO: +6 como simetría melódica, antecedente: 64 de paso.
-%TODO: CONSTRUCCIÓN DE ESCALAS.
+\section{Construcción de escalas}\label{sec:construccion-escalas}
 
 \end{multicols}
 \listoffigures
