@@ -556,6 +556,11 @@ Muchos acordes sistematizados, hoy con entidad propia tienen su origen en ancest
 \bigskip
 
 \begin{lilypond}[notime,ragged-right]
+\layout {
+  \context {
+    \Lyrics \consists "Text_spanner_engraver"
+  }
+}
 <<
   \new Staff \relative {
     \mark \markup {\italic "b)"}
@@ -576,8 +581,21 @@ Muchos acordes sistematizados, hoy con entidad propia tienen su origen en ancest
     >> \bar "|." \break
     \mark \markup {\italic "c)"}
     <f a dis!>2^"+6 italiano" <e gis e'>1 \bar "!"
-    <f a b dis!>2^"+6 francés" <e gis b e>1 \bar "!"
-    <f a c dis!>2^"+6 alemán" <e gis b e>1 \bar "||"
+    <f a b dis!>2^"+6 francés" <e gis! b e>1 \bar "!"
+    <<
+      {
+        \override TieColumn.tie-configuration = #'((1 . 1) (-1 . 1))
+        <a c dis!>2 ~
+        \once \override NoteColumn.force-hshift = 0.7
+        <a c> <gis! b>
+      }
+      \\
+      {
+        \stemUp
+        <f>2^"+6 alemán"
+        <e e'>1
+      }
+    >> \bar "||"
   }
   \new FiguredBass \figuremode {
     <6>2 <8>1
