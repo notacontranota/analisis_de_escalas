@@ -6,8 +6,9 @@
 \usepackage{float}                % para opción [H] en flotantes
 \usepackage[hidelinks]{hyperref}  % Enlaces en referencias
 \usepackage{tcolorbox}            % Cajas de color con título
+\tcbuselibrary{breakable=unlimited}
 \newtcolorbox{caja}[1]
-{colback=black!5!white,colframe=gray!75!black,fonttitle=\bfseries,title={#1}}
+{breakable,colback=black!5!white,colframe=gray!75!black,fonttitle=\bfseries,title={#1}}
 
 \begin{document}
 \title{Análisis de escalas}
@@ -149,7 +150,7 @@ El presente artículo expone un método de análisis de escalas musicales a part
 \end{multicols}
 
   \begin{caja}{Notación de escalas e intervalos}
-  { \label{caja:notacion-escalas} \footnotesize
+  { \label{caja:notacion-escalas} %\footnotesize
     \texttt{Visto que el \emph{cent} es una unidad de medida cuyos números más sencillos coinciden con el igual temperamento ---los números redondos como 300, 500 o 1100 representan intervalos igual temperados--- y considerando que la escala \musncp{\relative {c'2 d e f g a b c}} no es la misma en afinación justa que en otro temperamento, se propone anotar las escalas no solamente con sus notas en el pentagrama, sino con la desviación en \emph{cents} respecto al igual temperamento que cada una de ellas tiene. El siguiente ejemplo muestra dos escalas completamente diferentes:}
 
     \begin{center}
