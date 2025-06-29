@@ -6,9 +6,9 @@
 \usepackage{float}                % para opción [H] en flotantes
 \usepackage[hidelinks]{hyperref}  % Enlaces en referencias
 \usepackage{tcolorbox}            % Cajas de color con título
-\tcbuselibrary{breakable=unlimited}
+\tcbuselibrary{most}
 \newtcolorbox{caja}[1]
-{breakable,colback=black!5!white,colframe=gray!75!black,fonttitle=\bfseries,title={#1}}
+{enhanced jigsaw,breakable,colback=black!5!white,colframe=gray!75!black,fonttitle=\bfseries,title={#1}}
 
 \begin{document}
 \title{Análisis de escalas}
@@ -65,6 +65,7 @@ El presente artículo expone un método de análisis de escalas musicales a part
 
 \begin{figure}[ht]
 \centering
+\caption{Movimientos melódicos cadenciales de notas con pertenencia a la tónica.}\label{fig:mov-cad}
 \begin{lilypond}[notime]
 \relative {
   \mark \markup{\italic a)}
@@ -74,7 +75,6 @@ El presente artículo expone un método de análisis de escalas musicales a part
   a c \bar "||"
 }
 \end{lilypond}
-\caption{Movimientos melódicos cadenciales de notas con pertenencia a la tónica.}\label{fig:mov-cad}
 \end{figure}
 
 \begin{multicols}{2}
@@ -91,6 +91,7 @@ El presente artículo expone un método de análisis de escalas musicales a part
 
 \begin{figure}[ht]
 \centering
+\caption{Pertenencia a la tónica de los grados de la escala de Do mayor. }\label{fig:pertenencia-do}
 \begin{lilypond}[notime]
 \score {
   <<
@@ -104,7 +105,6 @@ El presente artículo expone un método de análisis de escalas musicales a part
   >>
 }
 \end{lilypond}
-\caption{Pertenencia a la tónica de los grados de la escala de Do mayor. }\label{fig:pertenencia-do}
 \end{figure}
 
 \begin{multicols}{2}
@@ -116,6 +116,7 @@ El presente artículo expone un método de análisis de escalas musicales a part
 
 \begin{figure}[H]
 \centering
+\caption{Pertenencia de los grados del modo menor a la tónica.}\label{fig:pertenencia-menor}
 \begin{lilypond}[notime]
 \score {
   <<
@@ -130,7 +131,6 @@ El presente artículo expone un método de análisis de escalas musicales a part
   >>
 }
 \end{lilypond}
-\caption{Pertenencia de los grados del modo menor a la tónica.}\label{fig:pertenencia-menor}
 \end{figure}
 
 \begin{multicols}{2}
@@ -237,6 +237,7 @@ El presente artículo expone un método de análisis de escalas musicales a part
 \section{Estructuras}\label{sec:estructuras}
 \begin{figure}[ht]
 \centering
+\caption{Dos estructuras basadas en cercanía acústica.}\label{fig:dos-estructuras}
 \begin{lilypond}[notime]
   \layout {
     \context {
@@ -254,7 +255,6 @@ El presente artículo expone un método de análisis de escalas musicales a part
     c''2\startGroup g'4\stopGroup f'\startGroup s c'2\stopGroup \bar "||"
   }
 \end{lilypond}
-\caption{Dos estructuras basadas en cercanía acústica.}\label{fig:dos-estructuras}
 \end{figure}
 
 \begin{multicols}{2}
@@ -305,6 +305,7 @@ El presente artículo expone un método de análisis de escalas musicales a part
 
   \begin{figure}[ht]
 \centering
+\caption{Melodía con antecedente y consecuente inscriptos en tetracordios.}\label{fig:tetra-hepta}
 \begin{lilypond}
   \layout {
     \context {
@@ -324,7 +325,6 @@ El presente artículo expone un método de análisis de escalas musicales a part
     d2.\stopGroup ) \bar "|."
   }
 \end{lilypond}
-\caption{Melodía con antecedente y consecuente inscriptos en tetracordios.}\label{fig:tetra-hepta}
 \end{figure}
 
 \begin{multicols}{2}
@@ -335,6 +335,7 @@ El presente artículo expone un método de análisis de escalas musicales a part
 
   \begin{figure}[ht]
   \centering
+  \caption{Arpegio y tetracordio en la escala.}\label{fig:arp-tetra-escala}
   \begin{lilypond}[notime]
     \layout {
       \context {
@@ -353,7 +354,6 @@ El presente artículo expone un método de análisis de escalas musicales a part
       c''2\startGroup b'4 a' g'2\stopGroup f'\startGroup e'4 d' c'2\stopGroup \bar "||"
     }
   \end{lilypond}
-  \caption{Arpegio y tetracordio en la escala.}\label{fig:arp-tetra-escala}
   \end{figure}
 
 \begin{multicols}{2}
@@ -382,13 +382,13 @@ El presente artículo expone un método de análisis de escalas musicales a part
 
   \begin{figure}[ht]
   \centering
+  \caption{Tres capas en la escala de Do mayor.}\label{fig:capas-escala}
   \begin{lilypond}[notime]
     \relative {
       \hide Stem
       c'1 d2 e1 f4 g1 a2 b4 c1
     }
   \end{lilypond}
-  \caption{Tres capas en la escala de Do mayor.}\label{fig:capas-escala}
   \end{figure}
 
 \begin{multicols}{2}
@@ -412,6 +412,7 @@ La asimetría existente en el acorde mayor, en una afinación natural o justa no
 
 \begin{figure}[ht]
 \centering
+\caption{Simetría y movimiento: tres acordes centrales.}\label{fig:+5-7dim-9D}
 \begin{lilypond}[notime]
 \include "harmonyli.ly"
 
@@ -433,7 +434,6 @@ La asimetría existente en el acorde mayor, en una afinación natural o justa no
   }
 }
 \end{lilypond}
-\caption{Simetría y movimiento: tres acordes centrales.}\label{fig:+5-7dim-9D}
 \end{figure}
 
 \begin{multicols}{2}
@@ -448,6 +448,7 @@ El \acorde.\Dohne..9\bemoltxt.7.. en contexto de doce notas tiene tres versiones
 
 \begin{figure}[ht]
 \centering
+\caption{Escala octatónica.}\label{fig:escala-octatonica}
 \begin{lilypond}[notime]
 \layout {
   \context {
@@ -460,7 +461,6 @@ El \acorde.\Dohne..9\bemoltxt.7.. en contexto de doce notas tiene tres versiones
   c'2\startGroup d4 ( es2\stopGroup ) f4 ( ges2 ) aes4 ( a2 ) b4 ( c2 )
 }
 \end{lilypond}
-\caption{Escala octatónica.}\label{fig:escala-octatonica}
 \end{figure}
 
 \begin{multicols}{2}
@@ -469,6 +469,7 @@ En la Figura~\ref{fig:escala-octatonica} se observa que, en blanquitas, está, d
 
 \begin{figure}[ht]
 \centering
+\caption{Melodía octatónica en «VI. Víctimas de un monstruo humano», movimiento de \emph{Oratorio de la Infancia}, de \textsc{Pablo Herrera}.}\label{fig:melodia-octatonica}
 \begin{lilypond}[notime]
 \relative {
   \tempo 4=80
@@ -482,7 +483,6 @@ En la Figura~\ref{fig:escala-octatonica} se observa que, en blanquitas, está, d
   en la bon -- dad de los de -- más.
 }
 \end{lilypond}
-\caption{Melodía octatónica en «VI. Víctimas de un monstruo humano», movimiento de \emph{Oratorio de la Infancia}, de \textsc{Pablo Herrera}.}\label{fig:melodia-octatonica}
 \end{figure}
 
 \begin{multicols}{2}
@@ -493,6 +493,7 @@ En la Figura~\ref{fig:escala-octatonica} se observa que, en blanquitas, está, d
 
 \begin{figure}[ht]
 \centering
+\caption{Escala por tonos: +5 y novena dominante en ella.}\label{fig:escala-tonos}
 \begin{lilypond}[notime]
 \include "harmonyli.ly"
 \layout {
@@ -520,7 +521,6 @@ En la Figura~\ref{fig:escala-octatonica} se observa que, en blanquitas, está, d
   \stopTextSpan
 }
 \end{lilypond}
-\caption{Escala por tonos: +5 y novena dominante en ella.}\label{fig:escala-tonos}
 \end{figure}
 
 \begin{multicols}{2}
@@ -535,6 +535,7 @@ Muchos acordes sistematizados, hoy con entidad propia, tienen su origen en ances
 
 \begin{figure}[H]
 \centering
+\caption{Cadencia frigia y jónica simultáneas: acordes de sexta aumentada}\label{fig:ac-+6}
 \begin{lilypond}[notime]
 \layout {
   \context {
@@ -621,7 +622,6 @@ Muchos acordes sistematizados, hoy con entidad propia, tienen su origen en ances
   }
 >>
 \end{lilypond}
-\caption{Cadencia frigia y jónica simultáneas: acordes de sexta aumentada}\label{fig:ac-+6}
 \end{figure}
 
 
